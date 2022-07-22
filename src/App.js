@@ -47,7 +47,7 @@ function App() {
                     <p>{data.main.feels_like.toFixed()}&#176;C</p>
                   ) : null}
                 </p>
-                <p>Feels like</p>
+                <p>Feels Like</p>
               </div>
               <div className="humidity">
                 <p className="bold">
