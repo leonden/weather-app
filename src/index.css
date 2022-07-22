@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Karla", sans-serif;
 }
 
 body {
@@ -15,7 +14,7 @@ body {
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.25em;
 }
 
 h1 {
@@ -43,16 +42,20 @@ h1 {
 
 .app .search {
   text-align: center;
-  padding: 1em;
+  padding: 2em;
+  width: 100%;
 }
 
 .app input {
+  width: 100%;
+  max-width: 320px;
   padding: 0.7em 1.5em;
   font-size: 1.2em;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.3);
   border: none;
   outline: none;
+  color: white;
 }
 
 ::placeholder {
@@ -60,9 +63,16 @@ h1 {
 }
 
 .container {
-  max-width: 700px;
-  height: 700px;
-  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 100%;
+  height: 100vh;
   padding: 0 1em;
   position: relative;
   display: flex;
@@ -73,6 +83,10 @@ h1 {
 .app .top {
   width: 100%;
   margin: 1em auto;
+}
+
+.app .top p {
+  font-size: 1.5em;
 }
 
 .app .description {
@@ -93,6 +107,21 @@ h1 {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
+.app .bottom p {
+  font-size: 1em;
+}
+
 .bold {
   font-weight: 700;
+}
+
+.app .bold p {
+  font-size: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    max-width: 800px;
+    max-height: 900px;
+  }
 }
