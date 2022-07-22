@@ -1,10 +1,14 @@
 import { useState } from "react";
 import axios from "axios";
 
+// function setBackground() {
+//   const appBackground = document.querySelector(".app");
+//   appBackground.style.background = "url('') no-repeat center center/cover";
+// }
+
 function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState({});
-
   const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.REACT_APP_OPENWEATHERMAP_API}`;
 
   const searchLocation = (e) => {
